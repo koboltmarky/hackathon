@@ -1,0 +1,24 @@
+version: "v1"
+project: "hackathon-starter"
+services:
+  frontend:
+    node:
+      image: "mikemichel/hackathon-starter:0.1"
+      instances: 1
+      mem: 512
+      domain: myhackathon1.sloppy.zone
+      port: 3000
+      env:
+        - MONGODB_URI: "mongodb://mongodb.backend.hackathon-starter/hackathon"
+        - ROOT_URL: "https://myhackathon1.sloppy.zone"
+      dependencies:
+        - "../backend/mongodb"
+  backend:
+    mongodb:
+      image: "mongo"
+      cmd: "mongod --smallfiles"
+      instances: 1
+      mem: 512
+      volumes:
+        - path: "/data/db"
+        - path: "/data/configdb"
