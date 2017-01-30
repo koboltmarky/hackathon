@@ -1,0 +1,5 @@
+app:
+  build:
+    image: mikemichel/hackathon-starter
+    dockerfile_path: Dockerfile
+  encrypted_env_file: sloppytoken.env.encrypted
