@@ -3,7 +3,7 @@ project: "hackathon-starter"
 services:
   frontend:
     node:
-      image: "mikemichel/hackathon-starter:0.1"
+      image: "$docker_image"
       instances: 1
       mem: 512
       domain: myhackathon1.sloppy.zone
