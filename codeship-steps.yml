@@ -1,6 +1,6 @@
 - service: app
   type: push
-  image_name: mikemichel/hackathon-starter
+  image_name: koboltmarky/hackathon-starter
   image_tag: "{{ .CommitID }}"
   registry: https://index.docker.io/v1/
   encrypted_dockercfg_path: dockercfg.encrypted

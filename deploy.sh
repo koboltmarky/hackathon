@@ -9,4 +9,4 @@ chmod +x /usr/local/bin/sloppy
 
 # deploy new image
 echo "Deploying new image using the CLI"
-sloppy change -img mikemichel/hackathon-starter:$CI_COMMIT_ID
+sloppy change -img koboltmarky/hackathon-starter:$CI_COMMIT_ID
